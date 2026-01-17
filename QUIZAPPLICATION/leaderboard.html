@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz - Leaderboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Leaderboard</h1>
+        <h2>Top Scores</h2>
+        
+        <div style="margin:20px 0;">
+            <button class="btn" onclick="goToQuiz()">Take Quiz</button>
+            <button class="btn btn-secondary" onclick="goHome()">Home</button>
+        </div>
+        
+        <table class="leaderboard-table" id="leaderboardTable">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboardBody">
+                <!-- Scores will load here -->
+            </tbody>
+        </table>
+        
+        <div class="link" style="margin-top:20px;">
+            <a href="quiz.html">Take Quiz</a> | 
+            <a href="index.html">Logout</a>
+        </div>
+    </div>
+    
+    <script src="js/leaderboard.js"></script>
+</body>
+</html>
