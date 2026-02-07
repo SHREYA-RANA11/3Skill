@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz - Results</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="result-container">
+            <h1>Quiz Completed!</h1>
+            <h2>Your Results</h2>
+            
+            <div class="score-circle">
+                <span id="score">0</span>
+                <span>SCORE</span>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-value" id="correct">0</div>
+                    <div class="stat-label">Correct</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="total">10</div>
+                    <div class="stat-label">Total</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="time">0s</div>
+                    <div class="stat-label">Time</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="percentage">0%</div>
+                    <div class="stat-label">Percentage</div>
+                </div>
+            </div>
+            
+            <p id="message" style="text-align:center; margin:20px 0;"></p>
+            
+            <div class="nav-buttons">
+                <button class="btn btn-secondary" onclick="takeQuizAgain()">Try Again</button>
+                <button class="btn" onclick="viewLeaderboard()">Leaderboard</button>
+                <button class="btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/result.js"></script>
+</body>
+</html>

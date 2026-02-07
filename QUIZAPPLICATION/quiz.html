@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz - Test</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body oncontextmenu="return false;">
+    <div class="container">
+        <div class="quiz-header">
+            <div class="user-info">
+                <h2 id="welcomeUser">Welcome!</h2>
+                <p>Question: <span id="questionNum">1</span>/<span id="totalQuestions">10</span></p>
+            </div>
+            <div class="timer" id="timer">10:00</div>
+        </div>
+        
+        <div class="question-container">
+            <h3 class="question" id="questionText">Loading question...</h3>
+            <div class="options" id="optionsContainer">
+                <!-- Options will load here -->
+            </div>
+        </div>
+        
+        <div class="nav-buttons">
+            <button class="btn btn-secondary" id="prevBtn" onclick="prevQuestion()">Previous</button>
+            <button class="btn" id="nextBtn" onclick="nextQuestion()">Next Question</button>
+            <button class="btn" id="submitBtn" onclick="submitQuiz()" style="display:none;">Submit Quiz</button>
+        </div>
+    </div>
+    
+    <!-- Include scripts -->
+    <script src="data/questions.js"></script>
+    <script src="js/quiz.js"></script>
+    <script>
+        // Prevent going back
+        history.pushState(null, null, location.href);
+        window.onpopstate = function() {
+            history.go(1);
+        };
+        
+        // Prevent refresh
+        window.addEventListener('beforeunload', function(e) {
+            e.preventDefault();
+            e.returnValue = '';
+        });
+    </script>
+</body>
+</html>
